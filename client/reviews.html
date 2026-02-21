@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รีวิวร้านอาหาร</title>
+  <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo" onclick="goHome()">🍜 FoodFinder</h2>
+  <button class="back-btn" onclick="goBack()">← กลับ</button>
+</nav>
+
+<h2>🏆 ร้านยอดนิยม</h2>
+<div id="topRestaurants"></div>
+
+<div class="review-container">
+
+  <h1>รีวิวร้านอาหาร</h1>
+
+  <!-- REVIEW FORM -->
+  <div class="review-form">
+    <input type="text" id="name" placeholder="ชื่อของคุณ">
+
+    <select id="restaurant">
+        <option value="Little Hideaway Cafe">Little Hideaway Cafe</option>
+        <option value="ครัวไทยต้นตำรับ">ครัวไทยต้นตำรับ</option>
+        <option value="Sushi House">Sushi House</option>
+    </select>
+    
+    <select id="rating">
+      <option value="5">⭐⭐⭐⭐⭐ ดีมาก</option>
+      <option value="4">⭐⭐⭐⭐ ดี</option>
+      <option value="3">⭐⭐⭐ ปานกลาง</option>
+      <option value="2">⭐⭐ พอใช้</option>
+      <option value="1">⭐ แย่</option>
+    </select>
+
+    <textarea id="comment" placeholder="เขียนรีวิวของคุณ..."></textarea>
+
+
+    <button onclick="addReview()">ส่งรีวิว</button>
+  </div>
+
+  <!-- REVIEW LIST -->
+  <div id="reviewList"></div>
+
+</div>
+
+<script src="reviews.js"></script>
+
+<script>
+function goBack(){ window.history.back(); }
+function goHome(){ window.location.href='home.html'; }
+</script>
+
+</body>
+</html>

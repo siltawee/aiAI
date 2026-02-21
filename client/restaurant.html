@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รายละเอียดร้าน</title>
+  <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <img id="resImage">
+</div>
+
+<!-- INFO -->
+<div class="info">
+  <h2 id="resName"></h2>
+  <p id="resDetail"></p>
+</div>
+
+<h3 class="menu-title">ตำแหน่งร้าน</h3>
+
+<div class="map-container">
+  <iframe
+    id="mapFrame"
+    width="100%"
+    height="250"
+    style="border:0;"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<h3 class="menu-title">เมนูอาหาร</h3>
+
+<!-- MENU -->
+<div id="menuList" class="menu-grid"></div>
+
+<button class="back-btn" onclick="goBack()">← กลับ</button>
+
+<script src="restaurant.js"></script>
+</body>
+</html>

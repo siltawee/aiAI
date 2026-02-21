@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo">🍜 FoodFinder</h2>
+  <ul class="menu">
+    <li>หน้าหลัก</li>
+    <li onclick="goRestaurants()">ร้านอาหาร</li>
+    <li onclick="location.href='reviews.html'">รีวิว</li>
+    <li>ติดต่อ</li>
+    <li onclick="location.href='profile.html'">โปรไฟล์</li>
+  </ul>
+  <button class="login-btn" id="authBtn">Login</button>
+</nav>
+
+<!-- HERO SEARCH -->
+<section class="hero">
+  <h1>ค้นหาร้านอาหารใกล้คุณ</h1>
+  <div class="search-box">
+    <input type="text" placeholder="ค้นหาร้าน หรือ เมนูอาหาร...">
+    <button>ค้นหา</button>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+  <h2>หมวดหมู่อาหาร</h2>
+  <div class="category-list">
+    <div class="category">🍜<p>ก๋วยเตี๋ยว</p></div>
+    <div class="category">🍕<p>พิซซ่า</p></div>
+    <div class="category">🍣<p>ญี่ปุ่น</p></div>
+    <div class="category">🥗<p>สุขภาพ</p></div>
+    <div class="category">☕<p>คาเฟ่</p></div>
+    <div class="category">🍔<p>ฟาสต์ฟู้ด</p></div>
+  </div>
+</section>
+
+<!-- RESTAURANTS -->
+<section class="restaurants">
+  <h2>ร้านแนะนำใกล้คุณ</h2>
+
+  <div class="restaurant-grid">
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?pasta">
+      <div class="card-info">
+        <h3>Little Hideaway Cafe</h3>
+        <p>⭐ 4.5 • 2.5 km</p>
+        <span class="open">เปิดอยู่</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?thai-food">
+      <div class="card-info">
+        <h3>ครัวไทยต้นตำรับ</h3>
+        <p>⭐ 4.7 • 3.1 km</p>
+        <span class="closed">ปิด</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?coffee">
+      <div class="card-info">
+        <h3>Cafe Amazon</h3>
+        <p>⭐ 4.2 • 1.2 km</p>
+        <span class="open">เปิดอยู่</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<script>
+function goRestaurants() {
+  window.location.href = "restaurants.html";
+}
+</script>
+
+</body>
+</html>
+
+<script src="auth.js"></script>

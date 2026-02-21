@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ร้านอาหาร</title>
+  <link rel="stylesheet" href="restaurants.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo" onclick="goHome()">🍜 FoodFinder</h2>
+  <button class="back-btn" onclick="goBack()">← ย้อนกลับ</button>
+</nav>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>ร้านอาหารทั้งหมด</h1>
+  <input type="text" id="searchInput" placeholder="ค้นหาร้านอาหาร...">
+</div>
+
+<!-- RESTAURANT GRID -->
+<div class="restaurant-grid">
+
+  <div class="card" data-name="Little Hideaway Cafe" onclick="openRestaurant('little-hideaway')">
+    <img src="https://source.unsplash.com/400x300/?cafe">
+    <div class="card-info">
+      <h3>Little Hideaway Cafe</h3>
+      <p>⭐ 4.5 • คาเฟ่</p>
+    </div>
+  </div>
+
+  <div class="card" data-name="ครัวไทยต้นตำรับ" onclick="openRestaurant('thai-kitchen')">
+    <img src="https://source.unsplash.com/400x300/?thai-food">
+    <div class="card-info">
+      <h3>ครัวไทยต้นตำรับ</h3>
+      <p>⭐ 4.7 • อาหารไทย</p>
+    </div>
+  </div>
+
+  <div class="card" data-name="Sushi House" onclick="openRestaurant('sushi-house')">
+    <img src="https://source.unsplash.com/400x300/?sushi">
+    <div class="card-info">
+      <h3>Sushi House</h3>
+      <p>⭐ 4.6 • ญี่ปุ่น</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function openRestaurant(id){
+  window.location.href = "restaurant.html?id=" + id;
+}
+
+function goBack() {
+  window.history.back();
+}
+
+function goHome() {
+  window.location.href = "home.html";
+}
+</script>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("keyup", () => {
+  const keyword = searchInput.value.toLowerCase();
+
+  cards.forEach(card => {
+    const name = card.dataset.name.toLowerCase();
+
+    if (name.includes(keyword)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+</script>
+
+<script>
+function openRestaurant(id){
+  window.location.href = "restaurant.html?id=" + id;
+}
+</script>
+
+</body>
+</html>
